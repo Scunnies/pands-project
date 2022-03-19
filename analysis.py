@@ -16,7 +16,17 @@ data = pd.read_csv('iris.csv')
 # a quick print exercise to see that all my data is correct and accessible
 # print (iris)
 
+# This function indicates whether values are missing an array like object,
+# such as this dataframe
+print("\n\n\nConfirming that there are no missing or null values in the dataset:\n")
+print(data.isna().sum())
+
+# print a concise summary of the iris dataframe information. 
+print("\n\n\nThis is a concise summary of the iris dataframe:\n")
+print (data.info())
+
 # the dataframe.describe function from PANDAS generates descriptive statistics
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
+print("\n\n\nThese are the summary statistics for the data set:\n")
 print(data.describe())
 
