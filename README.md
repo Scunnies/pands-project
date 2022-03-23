@@ -2,6 +2,24 @@
 ## Project to analyse the iris data set
 
 Table of Contents 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#technicalSpecification">Technical Specifications</a></li> 
+    <li><a href="#TheFisherIrisDataSet">The Fisher Iris Data Set</a></li>
+    <ul>
+        <li><a href="#History">History</a></li>
+        <li><a href="#RElationship">Relationship With Machine Learning</a></li>
+      </ul>
+    </li>
+    <li><a href="#investigation">My Investigation of the Data Set Using Python</a></li>
+    <li><a href="#SummaryConclusion">Summary & Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 Introduction
 
@@ -15,7 +33,7 @@ Summary and Conclusion
 
 References
 
- 
+<!-- Introduction -->
 ## Introduction
 
 This repository contains my pands project on the Fischer Iris Data Set, submitted for assessment under the Programming and Scripting module which in turn forms part of the Higher Diploma in Computing and Data Analytics at GMIT.
