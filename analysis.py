@@ -12,7 +12,7 @@ import re
 # it is also available online at https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 # to load the data set
 data = pd.read_csv('iris.csv')
-
+"""
 # a quick print exercise to see that all my data is correct and accessible
 # print (iris)
 
@@ -34,3 +34,10 @@ with open("VariableSummary.txt", "w") as f:
     f.write("\nThese are the summary statistics for the Fischer Iris Data Set:\n\n")
     f.write(str(data.describe()))
 f.close()
+"""
+#Histogram of each of the variables in the data set
+
+#dataframe.hist() from Pandas will generate a histogram of each column of variables
+
+data.hist (alpha = 1, bins = 30, figsize = (10,5))
+plt.show ()
