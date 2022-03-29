@@ -79,6 +79,12 @@ This data set being quite small, very famous and scrutinised to death I already 
 
 Having been down a rabbit hole on this subject, I understand there are many ways to deal with missing/null values but it depends on the type of data set in question.  For argument's sake, had I encountered null values in this particular data set I likely would have used the median value to replace them and we will see how that is calculated further on. 
 
+Summary of each variable, output to a text file
+
+Histogram of each variable, output to a png file
+[calculation of bins](https://www.datacamp.com/community/tutorials/histograms-matplotlib)
+
+
 
 <!-- SummaryConclusion -->
 ## Summary & Conclusion
@@ -100,6 +106,7 @@ https://www.kaggle.com/sixteenpython/machine-learning-with-iris-dataset
 https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
 
 Datacamp: plotting a histogram of iris data https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=5
+https://www.datacamp.com/community/tutorials/histograms-matplotlib
 
 Trying to find something interesting I can do with the data:
 https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html

@@ -2,11 +2,13 @@
 # Author: Eleanor Sammon
 
 # importing libraries which I expect to use
+from enum import auto
 import numpy as np
 import pandas as pd  
 import matplotlib.pyplot as plt 
 import seaborn as sns
 import re
+
 
 # I have saved the data set to my folder/repository as a CSV file
 # it is also available online at https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
@@ -39,5 +41,6 @@ f.close()
 
 #dataframe.hist() from Pandas will generate a histogram of each column of variables
 
-data.hist (alpha = 1, bins = 30, figsize = (10,5))
-plt.show ()
+data.hist (alpha = 0.75, color = ['orange'], edgecolor='w', bins = 'auto', figsize=(10,5))
+plt.suptitle("Histograms of the the Iris Data Set")
+plt.savefig("Histograms.png")
