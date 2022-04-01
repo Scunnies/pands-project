@@ -7,13 +7,16 @@ import numpy as np
 import pandas as pd  
 import matplotlib.pyplot as plt 
 import seaborn as sns
-import re
+
 
 
 # I have saved the data set to my folder/repository as a CSV file
 # it is also available online at https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 # to load the data set
+
 data = pd.read_csv('iris.csv')
+
+
 """
 # a quick print exercise to see that all my data is correct and accessible
 # print (iris)
@@ -40,7 +43,17 @@ f.close()
 #Histogram of each of the variables in the data set
 
 #dataframe.hist() from Pandas will generate a histogram of each column of variables
-
+#I set bins to auto rather than specify a number
 data.hist (alpha = 0.75, color = ['orange'], edgecolor='w', bins = 'auto', figsize=(10,5))
+
+# note plt.title put the title in the middle of the page, across the plots so I found the resolution
+# at https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.pyplot.suptitle.html
 plt.suptitle("Histograms of the the Iris Data Set")
 plt.savefig("Histograms.png")
+
+
+#scatterplot of each pair of variables, colour coded by their flower classification
+sns.pairplot (data, hue = "class")
+plt.suptitle ("Scatterplots of Iris Data Set Variables")
+plt.savefig ("Scatterplots.png")
+plt.show()
