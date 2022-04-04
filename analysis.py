@@ -17,7 +17,7 @@ import seaborn as sns
 data = pd.read_csv('iris.csv')
 
 
-"""
+
 # a quick print exercise to see that all my data is correct and accessible
 # print (iris)
 
@@ -28,18 +28,18 @@ print(data.isna().sum())
 
 # print a concise summary of the iris dataframe information. 
 print("\n\n\nThis is a concise summary of the iris dataframe:\n")
-print (data.info())
+data.info()
 
 # the dataframe.describe function from PANDAS generates descriptive statistics
 # and can be used to output a summary of each variable which I have stored in a
-# text file called "VariableSummary"
+# text file called "variable_summary"
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
 
-with open("VariableSummary.txt", "w") as f:
+with open("variable_summary.txt", "w") as f:
     f.write("\nThese are the summary statistics for the Fischer Iris Data Set:\n\n")
     f.write(str(data.describe()))
 f.close()
-"""
+
 #Histogram of each of the variables in the data set
 
 #dataframe.hist() from Pandas will generate a histogram of each column of variables
