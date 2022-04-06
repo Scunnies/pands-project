@@ -81,7 +81,8 @@ Having been down a rabbit hole on this subject, I understand there are many ways
 
 The [Pandas Dataframe `info` method](https://www.w3schools.com/python/pandas/ref_df_info.asp#:~:text=The%20info()%20method%20prints,method%20actually%20prints%20the%20info.) prints information about the DataFrame without the need to actually call the `print()` method. This useful feature gives us the number of columns, column labels, column data types, memory usage, range index, and the number of cells in each column (non-null values). A quick and easy way to get a concise summary of a dataframe. 
 
-![](summary.png)
+<img src="summary.png"
+     alt="Markdown Monster icon" />
 
 Descriptive or summary statistics can be elicited using the [Pandas dataframe `describe()`](https://www.w3schools.com/python/pandas/ref_df_describe.asp) method, returning information under the following standard headings: 
 
