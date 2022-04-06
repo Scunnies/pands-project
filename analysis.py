@@ -49,11 +49,10 @@ data.hist (alpha = 0.75, color = ['orange'], edgecolor='w', bins = 'auto', figsi
 # note plt.title put the title in the middle of the page, across the plots so I found the resolution
 # at https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.pyplot.suptitle.html
 plt.suptitle("Histograms of the the Iris Data Set")
-plt.savefig("Histograms.png")
+plt.savefig("images/Histograms.png") #saved to the images folder for neatness
 
 
 #scatterplot of each pair of variables, colour coded by their flower classification
 sns.pairplot (data, hue = "class")
 plt.suptitle ("Scatterplots of Iris Data Set Variables")
-plt.savefig ("Scatterplots.png")
-plt.show()
+plt.savefig ("images/Scatterplots.png")
