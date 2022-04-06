@@ -75,7 +75,11 @@ Next I imported the data set from [UC Irvine Machine Learning Repository](https:
 `data = pd.read_csv('iris.csv')`
 `print (iris)`
 
-This data set being quite small, very famous and scrutinised to death I already know that the data is ship shape for analysis and doesn't require any tidy-up but it seems also to be good practice when dealing with data to check for null values as a program encountering a null value may return an error.  Missing values are usually represented in the form of Nan, null or None.  
+This data set being quite small, very famous and scrutinised to death I already know that the data is ship shape for analysis and doesn't require any tidy-up but it seems also to be good practice when dealing with data to check for null values as a program encountering a null value may return an error.  Missing values are usually represented in the form of Nan, null or None.
+
+To establish null values I used the code `data.isna().sum()` which gives the sum of missing values. 
+
+![Null Values](https://github.com/Scunnies/pands-project/blob/main/images/null_values.png)
 
 Having been down a rabbit hole on this subject, I understand there are many ways to deal with [missing/null values](https://www.analyticsvidhya.com/blog/2021/10/handling-missing-value/) but it depends on the type of data set in question.  For argument's sake, had I encountered null values in this particular data set I likely would have used the median value to replace them and we will see how that is calculated further on. 
 
@@ -99,6 +103,8 @@ This summary of each variable is output to a text file called "variable_summary.
 A [histogram](https://asq.org/quality-resources/histogram) is a commonly used plotting tool to show frequency distributions in numerical data.  It visualises the distribution of values in a given dataset, the x-axis displaying the values in the dataset and the y-axis displaying the frequency of each value.  It differs from a bar chart in that it deals with quantitative data rather than categorical and elements are grouped together as ranges rather than individual entities, as they would be in a bar chart. In a histogram the data is allocated to [bins](https://www.datacamp.com/community/tutorials/histograms-matplotlib), a series of intervals into which the data is effectively sorted.  Helpfully, the `pandas` in-built function `.hist()` plots histograms for the features in the dataset. In trying to establish the correct number of bins to specify I found a number of methods such as the Freedman–Diaconis rule, Sturges' rule and the Shimazaki-Shinomoto method to name but a few, and then I happened across the fact that there is an [`auto`](https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram) function, which uses the maximum of the Sturges and Freedman-Diaconis bin choice, so I quite happily deployed that instead!  It's useful to know that there are other available methods for use on future data sets though. 
 
 I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not as easy to distinguish the species in these two histograms. 
+
+ ![Histograms](https://github.com/Scunnies/pands-project/blob/main/Histograms.png)
 
  
 
