@@ -81,18 +81,7 @@ Having been down a rabbit hole on this subject, I understand there are many ways
 
 The [Pandas Dataframe `info` method](https://www.w3schools.com/python/pandas/ref_df_info.asp#:~:text=The%20info()%20method%20prints,method%20actually%20prints%20the%20info.) prints information about the DataFrame without the need to actually call the `print()` method. This useful feature gives us the number of columns, column labels, column data types, memory usage, range index, and the number of cells in each column (non-null values). A quick and easy way to get a concise summary of a dataframe. 
 
-`<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 150 entries, 0 to 149
-Data columns (total 5 columns):
- #   Column       Non-Null Count  Dtype
----  ------       --------------  -----
- 0   sepallength  150 non-null    float64
- 1   sepalwidth   150 non-null    float64
- 2   petallength  150 non-null    float64
- 3   petalwidth   150 non-null    float64
- 4   class        150 non-null    object
-dtypes: float64(4), object(1)
-memory usage: 6.0+ KB`
+<img src="summary.png">
 
 Descriptive or summary statistics can be elicited using the [Pandas dataframe `describe()`](https://www.w3schools.com/python/pandas/ref_df_describe.asp) method, returning information under the following standard headings: 
 
@@ -109,9 +98,9 @@ This summary of each variable is output to a text file called "variable_summary.
 
 A [histogram](https://asq.org/quality-resources/histogram) is a commonly used plotting tool to show frequency distributions in numerical data.  It visualises the distribution of values in a given dataset, the x-axis displaying the values in the dataset and the y-axis displaying the frequency of each value.  It differs from a bar chart in that it deals with quantitative data rather than categorical and elements are grouped together as ranges rather than individual entities, as they would be in a bar chart. In a histogram the data is allocated to [bins](https://www.datacamp.com/community/tutorials/histograms-matplotlib), a series of intervals into which the data is effectively sorted.  Helpfully, the `pandas` in-built function `.hist()` plots histograms for the features in the dataset. In trying to establish the correct number of bins to specify I found a number of methods such as the Freedman–Diaconis rule, Sturges' rule and the Shimazaki-Shinomoto method to name but a few, and then I happened across the fact that there is an [`auto`](https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram) function, which uses the maximum of the Sturges and Freedman-Diaconis bin choice, so I quite happily deployed that instead!  It's useful to know that there are other available methods for use on future data sets though. 
 
-I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not easy to distinguish the species in these plots. 
+I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not as easy to distinguish the species in these two histograms. 
 
-The histogram for sepal width has a more normal distribution 
+ 
 
 <!-- SummaryConclusion -->
 ## Summary & Conclusion
