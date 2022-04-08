@@ -113,7 +113,7 @@ I saved the four histograms to `histograms.png`.  The histograms for petal lengt
 
 Scatter plots use a collection of points placed using Cartesian coordinates, basically a fancy name given to a system used to locate a point, or points, in two-dimensional space from two variables.  By displaying a variable in each of the X and Y axis, we can clearly see if a relationship or correlation between the two variables exists. The useful thing about scatter plots is that they retain the exact data values and sample size. By colour coding the three species of iris in the plots, this distinction is even clearer. 
 
-![Scatter Plots](https://github.com/Scunnies/pands-project/blob/main/scatterplots.png)
+![Scatter Plots](/images/scatterplots.png)
 
 [ANALYSE THE SCATTER PLOT INFO]
 
@@ -121,7 +121,7 @@ A heatmap is a really powerful visualisation tool that uses colour to indicate c
 
 I used Seaborn to plot the heatmap and in order to determine the correlation I used the `.corr()` method from pandas. The closer to 1, the more positively correlated they variables are, and because this presents like a visual of the concept "hotter-colder" I chose reds for this heatmap.  Also I wanted to show the value of the cells, so I passed the parameter `annot` as True.
 
-![Heatmap](https://github.com/Scunnies/pands-project/blob/main/heatmap.png)
+![Heatmap](/images/heatmap.png)
 
 The heatmap shows that petal_length and petal_width, with a value close to 1, have a high correlation. Both petal_width and petal_length also show good correlation with sepal_length.  Sepal_width has far less relationship with petal_width and petal_length.
 
