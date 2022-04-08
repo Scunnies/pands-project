@@ -7,15 +7,15 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#Introduction">Introduction</a></li>
-    <li><a href="#Technical-Specification">Technical Specifications</a></li> 
-    <li><a href="#The-Fisher-Iris-Data-Set">The Fisher Iris Data Set</a></li>
+    <li><a href="#Technical">Technical Specifications</a></li> 
+    <li><a href="#Dataset">The Fisher Iris Data Set</a></li>
     <ul>
         <li><a href="#History">History</a></li>
         <li><a href="#Relationship">Relationship With Machine Learning</a></li>
       </ul>
     </li>
     <li><a href="#Investigation">My Investigation of the Data Set Using Python</a></li>
-    <li><a href="#Summary-&-Conclusion">Summary & Conclusion</a></li>
+    <li><a href="#Summaryconclusion">Summary & Conclusion</a></li>
     <li><a href="#References">References</a></li>
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -34,7 +34,7 @@ I will be using VS Code as my source code editor and this accompanying README fi
 The aim and purpose of this project is to improve upon my Python coding and scripting, learn more about the dynamics of machine learning and the functions and uses of data visualisations. 
 
  
-<!-- Technical Specifications -->
+<!-- Technical -->
 ## Technical Specifications
 
 ### How to Download this project
@@ -44,13 +44,16 @@ The aim and purpose of this project is to improve upon my Python coding and scri
 3. You now have the option to either clone the repository, open with [Github Desktop](https://desktop.github.com/) or download the zip file
  
 
-<!-- The Fisher Iris Data Set -->
+<!-- Dataset -->
 ## The Fisher Iris Data Set – History and Relationship with Machine Learning
 <!-- History -->
 ### History
-The [Iris Flower Data Set](https://en.wikipedia.org/wiki/Iris_flower_data_set) represents four measurements of floral morphology on 150 plants - 50 individuals for each of three genus (I. versicolor, I. setosa, and I. virginica).  The numeric parameters which the dataset contains are Sepal width, Sepal length, Petal width and Petal length. With the exception of one or two points, the classes are linearly separable and, as a result, classification algorithms reach almost perfect accuracy.  Classification accuracy is the ratio of number of correct predictions to the total number of input samples, it works best if there are equal number of samples belonging to each class.
 
-![Iris Flowers]((https://github.com/Scunnies/pands-project/blob/main/irisflowers.png))
+There are between 200 and 300 species within the [iris](https://sites.berry.edu/cborer/inventory/iris/) genus so identifying them to this particular family can be challenging.  Most irises do have some shared characteristics however first among them is the presence of six 'petals'. The inner three petals are referred to as “standards” while the outer three sepals, often mistaken for petals, are called “falls”.
+
+The [Iris Flower Data Set](https://en.wikipedia.org/wiki/Iris_flower_data_set) represents four measurements of floral morphology on 150 plants - 50 individuals for each of three genus (Iris versicolor, Iris setosa, and Iris virginica).  The numeric parameters which the dataset contains are sepal width, sepal length, petal width and petal length. With the exception of one or two points, the classes are linearly separable and, as a result, classification algorithms reach almost perfect accuracy.  Classification accuracy is the ratio of number of correct predictions to the total number of input samples, it works best if there are equal number of samples belonging to each class which, in this case, there are.
+
+![Iris Flowers](https://github.com/Scunnies/pands-project/blob/main/images/irisflowers.png)
 
 It was, in fact, [Edgar Shannon Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson) (1897 - 1969) who collected the data to quantify the structural variation of Iris flowers of three related species, providing the raw data which formed the basis of the famous iris data set.  His research was focused on developing techniques to quantify geographic variation in Iris versicolor. It was, in fact, Anderson who determined the existence of a second species, Iris virginica.  It was during the 1930’s as part of this reasearch that Anderson gathered and documented the dataset which forms the basis of this and no doubt thousands of other machine learning assignments.  In 1929 Anderson received a fellowship to undertake studies at the John Innes Horticultural Institute in Britain, where he worked with cytogeneticist C. D. Darlington, geneticist J. B. S. Haldane and most notably for the purposes of this assignment, statistician R. A. Fisher.  If I were to correlate the Iris data set to Band Aid then Anderson was Midge Ure to Fisher's Geldof, in as much as he gets credited only occasionally!
 
@@ -114,7 +117,15 @@ Scatter plots use a collection of points placed using Cartesian coordinates, bas
 
 [ANALYSE THE SCATTER PLOT INFO]
 
-<!-- SummaryConclusion -->
+A heatmap is a really powerful visualisation tool that uses colour to indicate correlation and, in my opinion, one of the most intuitive to understand.  Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. Values closer to zero means there is no linear trend between the two variables.   
+
+I used Seaborn to plot the heatmap and in order to determine the correlation I used the `.corr()` method from pandas. The closer to 1, the more positively correlated they variables are, and because this presents like a visual of the concept "hotter-colder" I chose reds for this heatmap.  Also I wanted to show the value of the cells, so I passed the parameter `annot` as True.
+
+![Heatmap](https://github.com/Scunnies/pands-project/blob/main/heatmap.png)
+
+The heatmap shows that petal_length and petal_width, with a value close to 1, have a high correlation. Both petal_width and petal_length also show good correlation with sepal_length.  Sepal_width has far less relationship with petal_width and petal_length.
+
+<!-- Summaryconclusion -->
 ## Summary & Conclusion
 INSERT TEXT
 
@@ -138,6 +149,9 @@ https://www.datacamp.com/community/tutorials/histograms-matplotlib
 
 Trying to find something interesting I can do with the data:
 https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html
+
+Heatmap interpretation:
+https://stats.stackexchange.com/questions/392517/how-can-one-interpret-a-heat-map-plot
 
 Research on classification accuracy:
 https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234

@@ -56,3 +56,10 @@ plt.savefig("images/Histograms.png") #saved to the images folder for neatness
 sns.pairplot (data, hue = "class")
 plt.suptitle ("Scatterplots of Iris Data Set Variables")
 plt.savefig ("images/Scatterplots.png")
+
+# heatmap 
+plt.figure(figsize=(10,10))
+sns.heatmap(data.corr(), cmap='Reds', annot=True)
+plt.suptitle ("Heatmap of Iris Data Set Variables")
+plt.plot()
+plt.savefig ("images/heatmap.png")
