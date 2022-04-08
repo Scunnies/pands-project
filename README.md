@@ -49,7 +49,7 @@ The aim and purpose of this project is to improve upon my Python coding and scri
 <!-- History -->
 ### History
 
-There are between 200 and 300 species within the [iris](https://sites.berry.edu/cborer/inventory/iris/) genus so identifying them to this particular family can be challenging.  Most irises do have some shared characteristics however first among them is the presence of six 'petals'. The inner three petals are referred to as “standards” while the outer three sepals, often mistaken for petals, are called “falls”.
+There are between 200 and 300 species within the [iris](https://sites.berry.edu/cborer/inventory/iris/) genus so identifying them to this particular family can be challenging.  Most irises do have some shared characteristics however, first among them is the presence of six 'petals'. The inner three petals are referred to as “standards” while the outer three sepals, often mistaken for petals, are called “falls”. Sepals serve as protection for the flower in bud and often as support for the petals when in bloom.
 
 The [Iris Flower Data Set](https://en.wikipedia.org/wiki/Iris_flower_data_set) represents four measurements of floral morphology on 150 plants - 50 individuals for each of three genus (Iris versicolor, Iris setosa, and Iris virginica).  The numeric parameters which the dataset contains are sepal width, sepal length, petal width and petal length. With the exception of one or two points, the classes are linearly separable and, as a result, classification algorithms reach almost perfect accuracy.  Classification accuracy is the ratio of number of correct predictions to the total number of input samples, it works best if there are equal number of samples belonging to each class which, in this case, there are.
 
@@ -61,7 +61,7 @@ The Geldof of their relationship was [Sir Ronald Aylmer Fisher](https://en.wikip
 
 <!-- Relationship -->
 ### Relationship with Machine Learning
-Each row in the Iris dataset describes one flower for which there are four seperate measurements - the length and width of the sepals, the length and width of the petals.  The 5th column is the species of iris: setosa, versicolor, or virginica. Sepals (because I had to look them up!) serve as protection for the flower in bud and often as support for the petals when in bloom.
+Each row in the Iris dataset describes one flower for which there are four seperate measurements - the length and width of the sepals, the length and width of the petals.  The 5th column is the species of iris: setosa, versicolor, or virginica. 
 
 Despite its shaky provenance the Fisher data set is described as the 'Hello World' for machine learning, useful for practicing basic machine learning algorithms.  It endures because the data is open source, the accuracy and origin are both known, and with three types of flower, it allows for more than just binary classification.  Additionally, with an even 50 in each classification it is balanced and has no null or missing values.  All measurements are on the same scale (cm) so no normalisation is called for and the file size isn’t unwieldy or excessively complicated.  
 
@@ -109,7 +109,7 @@ A [histogram](https://asq.org/quality-resources/histogram) is a commonly used pl
 
 I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not as easy to distinguish the species in these two histograms. 
 
- ![Histograms](https://github.com/Scunnies/pands-project/blob/main/Histograms.png)
+ ![Histograms](/images/Histograms.png)
 
 Scatter plots use a collection of points placed using Cartesian coordinates, basically a fancy name given to a system used to locate a point, or points, in two-dimensional space from two variables.  By displaying a variable in each of the X and Y axis, we can clearly see if a relationship or correlation between the two variables exists. The useful thing about scatter plots is that they retain the exact data values and sample size. By colour coding the three species of iris in the plots, this distinction is even clearer. 
 
