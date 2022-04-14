@@ -1,27 +1,6 @@
 # pands-project
 ## Project to analyse the iris data set
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#Introduction">Introduction</a></li>
-    <li><a href="#Technical">Technical Specifications</a></li> 
-    <li><a href="#Dataset">The Fisher Iris Data Set</a></li>
-    <ul>
-        <li><a href="#History">History</a></li>
-        <li><a href="#Relationship">Relationship With Machine Learning</a></li>
-      </ul>
-    </li>
-    <li><a href="#Investigation">My Investigation of the Data Set Using Python</a></li>
-    <li><a href="#Summaryconclusion">Summary & Conclusion</a></li>
-    <li><a href="#References">References</a></li>
-    <li><a href="#Acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
 # Table of Contents
 <a name="-table-of-contents"></a>
 
