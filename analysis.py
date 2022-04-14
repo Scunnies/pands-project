@@ -21,6 +21,9 @@ data = pd.read_csv('iris.csv')
 # a quick print exercise to see that all my data is correct and accessible
 # print (iris)
 
+print("\n\n\nDisplaying the number of rows and columns are in the dataset:")
+print (data.shape)
+
 # This function indicates whether values are missing an array-like object,
 # such as this dataframe
 print("\n\n\nConfirming that there are no missing or null values in the dataset:\n")
