@@ -43,6 +43,15 @@ with open("variable_summary.txt", "w") as f:
     f.write(str(data.describe()))
 f.close()
 
+## To get specific measurements for each species I can drill down using the groupby function
+
+print ("\n\nThese are the minimum measurements for each class:\n")
+print(data.groupby("class").min())
+
+print ("\n\nThese are the maximum measurements for each class:\n")
+print(data.groupby("class").max())
+
+
 #Histogram of each of the variables in the data set
 
 #dataframe.hist() from Pandas will generate a histogram of each column of variables
