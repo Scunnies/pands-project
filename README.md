@@ -32,7 +32,7 @@ The aim and purpose of this project is to improve upon my Python coding and scri
 2. Click the green `Code` button
 3. You now have the option to either clone the repository, open with [Github Desktop](https://desktop.github.com/) or download the zip file
  
-The script is written in Python and Python 3 is required to run it.  It can be downloaded from [https://www.python.org/downloads/](https://www.python.org/downloads/).  Anaconda and a Command Line program may also be required and these can be downloaded from [https://www.anaconda.com/](https://www.anaconda.com/) and [https://cmder.net/](https://cmder.net/).
+The script is written in Python and Python 3 is required to run it.  It can be downloaded from [https://www.python.org/downloads/](https://www.python.org/downloads/).  Anaconda and a Command Line program may also be required and these can be downloaded from [https://www.anaconda.com/](https://www.anaconda.com/) and [https://cmder.net/](https://cmder.net/) respectively.
 
 To run the script enter `python analysis.py` on the command line.  Some of the output from the code, such as tables and plots are saved in the images folder and also included as graphics in this README file.
 
@@ -106,7 +106,7 @@ While not a terribly visual tool in itself, I found it useful in that it gives t
 ## Data Visualisation
 
 ### Histogram
-A [histogram](https://asq.org/quality-resources/histogram) is a commonly used plotting tool to show frequency distributions in numerical data.  It visualises the distribution of values in a given dataset, the x-axis displaying the values in the dataset and the y-axis displaying the frequency of each value.  It differs from a bar chart in that it deals with quantitative data rather than categorical and elements are grouped together as ranges rather than individual entities, as they would be in a bar chart. In a histogram the data is allocated to [bins](https://www.datacamp.com/community/tutorials/histograms-matplotlib), a series of intervals into which the data is effectively sorted.  Helpfully, the `pandas` in-built function `.hist()` plots histograms for the features in the dataset. In trying to establish the correct number of bins to specify I found a number of methods such as the Freedman–Diaconis rule, Sturges' rule and the Shimazaki-Shinomoto method to name but a few, and then I happened across the fact that there is an [`auto`](https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram) function, which uses the maximum of the Sturges and Freedman-Diaconis bin choice, so I quite happily deployed that instead!  It's useful to know that there are other available methods for use on future data sets though. 
+A [histogram](https://asq.org/quality-resources/histogram) is a commonly used plotting tool to show frequency distributions in numerical data.  It visualises the distribution of values in a given dataset, the x-axis displaying the values in the dataset and the y-axis displaying the frequency of each value.  It differs from a bar chart in that it deals with quantitative data rather than categorical and elements are grouped together as ranges rather than individual entities, as they would be in a bar chart. In a histogram the data is allocated to bins, a series of intervals into which the data is effectively sorted.  Helpfully, the `pandas` in-built function `.hist()` plots histograms for the features in the dataset. In trying to establish the correct number of bins to specify I found a number of methods such as the Freedman–Diaconis rule, Sturges' rule and the Shimazaki-Shinomoto method to name but a few, and then I happened across the fact that there is an [`auto`](https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram) function, which uses the maximum of the Sturges and Freedman-Diaconis bin choice, so I quite happily deployed that instead!  It's useful to know that there are other available methods for use on future data sets though. 
 
 I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not as easy to distinguish the species in these two histograms. 
 
@@ -117,7 +117,7 @@ Scatter plots use a collection of points placed using Cartesian coordinates, bas
 
 ![Scatter Plots](/images/Scatterplots.png)
 
-[ANALYSE THE SCATTER PLOT INFO]
+Colour coding greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some overlap with each other.  The notable exception to this is the scatterplot for sepal_length and sepal_width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful. 
 
 ### Heatmap
 A heatmap is a really powerful visualisation tool that uses colour to indicate correlation and, in my opinion, one of the most intuitive to understand.  Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. Values closer to zero means there is no linear trend between the two variables.   
@@ -134,32 +134,41 @@ INSERT TEXT
 
 <a name="6.-references"></a>
 ## References
-The Fisher Iris Data Set – History and Relationship with Machine Learning:
-https://en.wikipedia.org/wiki/Iris_flower_data_set
-https://en.wikipedia.org/wiki/Eugenics
-https://en.wikipedia.org/wiki/Ronald_Fisher
-https://en.wikipedia.org/wiki/Edgar_Anderson
-https://www.meganstodel.com/posts/no-to-iris/
-https://www.informit.com/articles/article.aspx?p=2982113&seqNum=2 # 3.2 A Simple Classification Dataset, Machine Learning with Python for Everyone 
-https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
-https://www.kaggle.com/sixteenpython/machine-learning-with-iris-dataset
 
-https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
+Website: Iris Data Set - raw data - https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 
-Datacamp: plotting a histogram of iris data https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=5
-https://www.datacamp.com/community/tutorials/histograms-matplotlib
+Website: Wikipedia - Iris Flower Data Set - https://en.wikipedia.org/wiki/Iris_flower_data_set
 
-Trying to find something interesting I can do with the data:
-https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html
+Website: Wikipedia - Edgar Anderson - https://en.wikipedia.org/wiki/Edgar_Anderson
 
-Heatmap interpretation:
-https://stats.stackexchange.com/questions/392517/how-can-one-interpret-a-heat-map-plot
+Website: Wikipedia - Ronald Fischer - https://en.wikipedia.org/wiki/Ronald_Fisher
 
-Research on classification accuracy:
-https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
+Website: Wikipedia - Eugenics - https://en.wikipedia.org/wiki/Eugenics
 
-ReadMe template:
-https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/BLANK_README.md
+Publication: Sweigart, A., “Automate the Boring Stuff with Python”, 2015
+
+Blog: Stop using iris, Megal Stodal dated 24/06/2020 - https://www.meganstodel.com/posts/no-to-iris/
+
+Blog: Discriminating Fisher's iris data by using the petal areas, Rick Wicklin on The DO Loop 09/08/2012 - https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-area
+
+Website: Machine Learning Classification: Machine Learning with Python for Everyone, Mark Fenner dated 14/08/2019 - https://www.informit.com/articles/article.aspx?p=2982113&seqNum=2 
+
+Website: Python – Basics of Pandas using Iris Dataset, last updated 27/08/2021 - https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
+
+Website: Machine Learning with Iris Dataset, Anand Venkataraman dated 2019 -  https://www.kaggle.com/sixteenpython/machine-learning-with-iris-dataset
+
+Website: Pandas Dataframe Describe Method - https://www.w3schools.com/python/pandas/ref_df_describe.asp
+
+Website: Yet Another Iris EDA, Aditya Jetely,  dated 12/10/2020 - https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d
+
+Website: Stack overflow: How to choose bins in matplotlib histogram - https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram
+
+Website: Datacamp: plotting a histogram of iris data - https://www.datacamp.com/community/tutorials/histograms-matplotlib
+
+Website: Visualizing Data in Python Using plt.scatter() - https://realpython.com/visualizing-python-plt-scatter/
+
+Website: Heatmap interpretation, dated February 2019 - https://stats.stackexchange.com/questions/392517/how-can-one-interpret-a-heat-map-plot
+
 
 <!-- Acknowledgements -->
 ## Acknowledgements:

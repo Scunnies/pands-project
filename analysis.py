@@ -8,8 +8,6 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
-
-
 # I have saved the data set to my folder/repository as a CSV file
 # it is also available online at https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 # to load the data set
@@ -43,7 +41,8 @@ with open("variable_summary.txt", "w") as f:
     f.write(str(data.describe()))
 f.close()
 
-## To get specific measurements for each species I can drill down using the groupby function
+## To get specific measurements for each species I can drill down using the groupby function and 
+## narrow it down to show only the max and minimum values for each of the classes
 
 print ("\n\nThese are the minimum measurements for each class:\n")
 print(data.groupby("class").min())
@@ -66,10 +65,11 @@ plt.savefig("images/Histograms.png") #saved to the images folder for neatness
 
 #scatterplot of each pair of variables, colour coded by their flower classification
 sns.pairplot (data, hue = "class")
-plt.suptitle ("Scatterplots of Iris Data Set Variables")
+plt.suptitle ("Scatterplots of Iris Data Set Variables\n\n")
 plt.savefig ("images/Scatterplots.png")
 
-# heatmap 
+# heatmap shown in reds along with the correlation values
+# I estimated the figure size (squared seems the norm)
 plt.figure(figsize=(10,10))
 sns.heatmap(data.corr(), cmap='Reds', annot=True)
 plt.suptitle ("Heatmap of Iris Data Set Variables")
