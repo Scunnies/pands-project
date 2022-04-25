@@ -66,12 +66,19 @@ plt.savefig("images/Histograms.png") #saved to the images folder for neatness
 #scatterplot of each pair of variables, colour coded by their flower classification
 sns.pairplot (data, hue = "class")
 plt.suptitle ("Scatterplots of Iris Data Set Variables\n\n")
-plt.savefig ("images/Scatterplots.png")
+plt.savefig ("images/scatterplots.png")
+
+## a violinplot to give an indication of how the values are distributed
+plt.figure(figsize=(10,10))
+sns.violinplot(x=data["class"], y=data["sepal_length"])
+plt.grid (axis = "y") # I referred to w3schools for how to put in lines on Y axis only
+plt.suptitle ("Violinplot of Iris Data Set Species Petal Length\n\n")
+plt.savefig ("images/violinplot.png")
+
 
 # heatmap shown in reds along with the correlation values
 # I estimated the figure size (squared seems the norm)
 plt.figure(figsize=(10,10))
 sns.heatmap(data.corr(), cmap='Reds', annot=True)
 plt.suptitle ("Heatmap of Iris Data Set Variables")
-plt.plot()
 plt.savefig ("images/heatmap.png")

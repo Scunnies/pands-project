@@ -115,9 +115,17 @@ I saved the four histograms to `histograms.png`.  The histograms for petal lengt
 ### Scatter plots
 Scatter plots use a collection of points placed using Cartesian coordinates, basically a system used to locate a point, or points, in two-dimensional space from two variables.  By displaying a variable in each of the X and Y axis, we can clearly see if a relationship or correlation between the two variables exists. The useful thing about scatter plots is that they retain the exact data values and sample size. By colour coding the three species of iris in the plots, this distinction is even clearer. 
 
-![Scatter Plots](/images/Scatterplots.png)
+![Scatter Plots](/images/scatterplots.png)
 
-Colour coding greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some overlap with each other.  The notable exception to this is the scatterplot for sepal_length and sepal_width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful. 
+Specifying a colour for each species greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some overlap with each other.  The notable exception to this is the scatterplot for sepal_length and sepal_width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful or useful. 
+
+### Violin Plot 
+
+I find violin plots visually better than a box plot while fulfilling a similar purpose. As I understand it, a violin plot is something of a cross between a box plot and a histogram in that it shows density.  The density is 'mirrored' giving the plot its distinctive violin shape.  The dot in the middle of each 'violin'  is the median value of that particular range.  
+
+![violinplot](/images/violinplot.png)
+
+For the purposes of this exercise I plotted petal length and it's clear from the plot that (once again!) *Iris setosa* differs considerably from the other two species whose violins are similar but nonetheless *Iris verginica* demonstrates a greater range in values than *Iris versicolor*. 
 
 ### Heatmap
 A heatmap is a really powerful visualisation tool that uses colour to indicate correlation and, in my opinion, one of the most intuitive to understand.  Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. Values closer to zero means there is no linear trend between the two variables.   
@@ -154,6 +162,8 @@ Blog: Discriminating Fisher's iris data by using the petal areas, Rick Wicklin o
 Website: Machine Learning Classification: Machine Learning with Python for Everyone, Mark Fenner dated 14/08/2019 - https://www.informit.com/articles/article.aspx?p=2982113&seqNum=2 
 
 Website: Python – Basics of Pandas using Iris Dataset, last updated 27/08/2021 - https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
+
+Website: Seaborn: Statistical Data Visualisation https://seaborn.pydata.org/
 
 Website: Machine Learning with Iris Dataset, Anand Venkataraman dated 2019 -  https://www.kaggle.com/sixteenpython/machine-learning-with-iris-dataset
 
