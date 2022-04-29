@@ -99,7 +99,7 @@ I have output a summary of each variable to a text file called "variable_summary
 
 What I really wanted to know was the minimum and maximum for each of the four measurements by class and after a bit of digging around I came across the [`groupby`](https://realpython.com/pandas-groupby/#:~:text=You%20call%20.,a%20single%20column%20name%20to%20.) function in `pandas` which allowed me to group the classes of species and then narrow it down to show only the minimum and maximum measurements for each.  
 
- ![min_max_measurements](/images/min_max_measurements.png)
+ ![max_min_mean](/images/max_min_mean.png)
 
 While not a terribly visual tool in itself, I found it useful in that it gives the range of measurements for each species and already it is clear that *Iris setosa* is smaller, and by virtue of that, more distinctive than the other two species. 
 
@@ -182,3 +182,4 @@ Website: Heatmap interpretation, dated February 2019 - https://stats.stackexchan
 
 <!-- Acknowledgements -->
 ## Acknowledgements:
+Andrew Beatty, Lecturer, GMIT

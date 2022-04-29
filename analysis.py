@@ -50,6 +50,8 @@ print(data.groupby("class").min())
 print ("\n\nThese are the maximum measurements for each class:\n")
 print(data.groupby("class").max())
 
+print ("\n\nThese are the mean measurements for each class:\n")
+print(data.groupby("class").mean())
 
 #Histogram of each of the variables in the data set
 
