@@ -72,7 +72,7 @@ plt.savefig ("images/scatterplots.png")
 plt.figure(figsize=(10,10))
 sns.violinplot(x=data["class"], y=data["sepal_length"])
 plt.grid (axis = "y") # I referred to w3schools for how to put in lines on Y axis only
-plt.suptitle ("Violinplot of Iris Data Set Species Petal Length\n\n")
+plt.suptitle ("Violinplot of Iris Data Set Species: Sepal Length\n\n")
 plt.savefig ("images/violinplot.png")
 
 

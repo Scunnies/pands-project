@@ -51,7 +51,7 @@ It was, in fact, [Edgar Shannon Anderson](https://en.wikipedia.org/wiki/Edgar_An
 The Geldof of their relationship was [Sir Ronald Aylmer Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) (1890 – 1962), a British mathematician, statistician, geneticist and academic. For his work in statistics, he has been variously described as "a genius who almost single-handedly created the foundations for modern statistical science" and "the single most important figure in 20th century statistics" and was touted as a natural successor to Darwin in terms of his scientific and evolutionary theorising.  Notwithstanding his genius, Fisher had some questionable links to [eugenics](https://en.wikipedia.org/wiki/Eugenics), he was a founding Chairman of the University of Cambridge Eugenics Society in 1911.  Eugenics is a set of beliefs and practices that aim to improve the genetic quality of a human population, historically by excluding people and groups judged to be inferior or promoting those judged to be superior.  Fischer went on to distance himself from the society in 1941 but then, subsequent to World War II, wrote a character reference for a Nazi eugenicist who had inauspicious links to Josef Mengele.   His paper on the Iris data set, which was published in 1936, has been accused of being a tool to advance the science of eugenics, proposing a methodological framework to delineate 'desirable' traits, ostensibly to promote eugenics programs. This is one reason why other data sets are often ushered forth as more morally palatable substitutes.  Alternatives, as suggested by one Data Scientist, [Megan Todal](https://www.meganstodel.com/posts/no-to-iris/), include data on cars (`mpg` from `ggplot2`), hawks (found in the `Stat2Data` package) and mushrooms (data set available on the Machine Learning Repository of the UC Irvine website).   
 
 ### Relationship with Machine Learning
-Each row in the Iris dataset describes one flower for which there are four seperate measurements - the length and width of the sepals, the length and width of the petals.  The 5th column is the species of iris: *setosa, versicolor*, or *virginica*. 
+Each row in the Iris dataset describes one flower for which there are four seperate measurements - the length and width of the sepals and the length and width of the petals.  The 5th column is the species of iris: *setosa, versicolor*, or *virginica*. 
 
 Despite its shaky provenance the Fisher data set is described as the 'Hello World' for machine learning, useful for practicing basic machine learning algorithms.  It endures because the data is open source, the accuracy and origin are both known, it is 'real' data and with three types of flower, it allows for more than just binary classification.  Additionally, with an even 50 in each classification it is balanced and has no null or missing values.  All measurements are on the same scale (cm) so no normalisation is called for and the file size isn’t unwieldy or excessively complicated.  
 
@@ -72,7 +72,7 @@ Next I imported the data set from [UC Irvine Machine Learning Repository](https:
 ### Summary Information
 I use `shape` to give me some basic information on my array, namely the number of rows and columns, a simple and useful tool to tell me what I'm dealing with. 
 
-This data set being quite small, very famous and scrutinised to death I already know that the data is ship shape for analysis and doesn't require any tidy-up but it seems also to be good practice when dealing with data to check for null values as a program encountering a null value may return an error.  Missing values are usually represented in the form of Nan, null or None.
+This data set being quite small, very famous and scrutinised to death I already know that the data is ship-shape for analysis and doesn't require any tidy-up but it seems also to be good practice when dealing with data to check for null values as a program encountering a null value may return an error and/or skew the analysis.  Missing values are usually represented in the form of Nan, null or None.
 
 To establish null values I used the code `data.isna().sum()` which gives the sum of missing values. 
 
@@ -95,20 +95,20 @@ min - the minimum value
 75% - The 75% percentile
 max - the maximum value
 
-This summary of each variable is output to a text file called "variable_summary.txt". As mentioned previously, if I were to encounter null values in the data and wanted to fill them in rather than leave them blank I could use the mean value shown here instead.
+I have output a summary of each variable to a text file called "variable_summary.txt" which forms part of the repository for this project. As mentioned previously, if I were to encounter null values in the data and wanted to fill them in rather than leave them blank I could use the mean value shown here instead.
 
 What I really wanted to know was the minimum and maximum for each of the four measurements by class and after a bit of digging around I came across the [`groupby`](https://realpython.com/pandas-groupby/#:~:text=You%20call%20.,a%20single%20column%20name%20to%20.) function in `pandas` which allowed me to group the classes of species and then narrow it down to show only the minimum and maximum measurements for each.  
 
  ![min_max_measurements](/images/min_max_measurements.png)
 
-While not a terribly visual tool in itself, I found it useful in that it gives the range of measurements for each species and already it is clear that *Iris setosa* is smaller than the other two species. 
+While not a terribly visual tool in itself, I found it useful in that it gives the range of measurements for each species and already it is clear that *Iris setosa* is smaller, and by virtue of that, more distinctive than the other two species. 
 
 ## Data Visualisation
 
 ### Histogram
 A [histogram](https://asq.org/quality-resources/histogram) is a commonly used plotting tool to show frequency distributions in numerical data.  It visualises the distribution of values in a given dataset, the x-axis displaying the values in the dataset and the y-axis displaying the frequency of each value.  It differs from a bar chart in that it deals with quantitative data rather than categorical and elements are grouped together as ranges rather than individual entities, as they would be in a bar chart. In a histogram the data is allocated to bins, a series of intervals into which the data is effectively sorted.  Helpfully, the `pandas` in-built function `.hist()` plots histograms for the features in the dataset. In trying to establish the correct number of bins to specify I found a number of methods such as the Freedman–Diaconis rule, Sturges' rule and the Shimazaki-Shinomoto method to name but a few, and then I happened across the fact that there is an [`auto`](https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram) function, which uses the maximum of the Sturges and Freedman-Diaconis bin choice, so I quite happily deployed that instead!  It's useful to know that there are other available methods for use on future data sets though. 
 
-I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not as easy to distinguish the species in these two histograms. 
+I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal_length and sepal_width is significant such that it's not as easy to distinguish the species in these two histograms. 
 
  ![Histograms](/images/Histograms.png)
 
@@ -117,24 +117,24 @@ Scatter plots use a collection of points placed using Cartesian coordinates, bas
 
 ![scatterplots](/images/scatterplots.png)
 
-Specifying a colour for each species greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some overlap with each other.  The notable exception to this is the scatterplot for sepal_length and sepal_width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful or useful. 
+Specifying a colour for each species greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some slight overlap with each other or can at least be said to have a much closer correlation with each other than with *setosa*.  The notable exception to this is the scatterplot for sepal_length and sepal_width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful or useful. 
 
 ### Violin Plot 
 
-I find violin plots visually better than a box plot while fulfilling a similar purpose. As I understand it, a violin plot is something of a cross between a box plot and a histogram in that it shows density.  The density is 'mirrored' giving the plot its distinctive violin shape.  The dot in the middle of each 'violin'  is the median value of that particular range.  
+I find violin plots visually better than boxplots while fulfilling a similar purpose. As I understand it, a violin plot is something of a cross between a box plot and a histogram in that it shows the spread or distribution of the data.  The density is 'mirrored' giving the plot its distinctive violin shape.  The dot in the middle of each 'violin'  is the median value of that particular range.  
 
 ![violinplot](/images/violinplot.png)
 
 For the purposes of this exercise I plotted petal length and it's clear from the plot that (once again!) *Iris setosa* differs considerably from the other two species whose violins are similar but nonetheless *Iris verginica* demonstrates a greater range in values than *Iris versicolor*. 
 
 ### Heatmap
-A heatmap is a really powerful visualisation tool that uses colour to indicate correlation and, in my opinion, one of the most intuitive to understand.  Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. Values closer to zero means there is no linear trend between the two variables.   
+A heatmap is a really powerful visualisation tool that uses colour to indicate correlation and, in my opinion, one of the most intuitive to understand.  Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. +1 means variables are correlated, -1 they are inversely correlated and values closer to zero means there is no linear trend between the two variables.   
 
-I used Seaborn to plot the heatmap and in order to determine the correlation I used the `.corr()` method from pandas. The closer to 1, the more positively correlated they variables are, and because this presents like a visual of the concept "hotter-colder" I chose reds for this heatmap.  Also I wanted to show the value of the cells, so I passed the parameter `annot` as True.
+I used Seaborn to plot the heatmap and in order to determine the correlation I used the `.corr()` method from pandas. The closer to 1, the more positively correlated they variables are, and because this presents like a visual of the concept "hotter-colder" I chose reds for this heatmap.  Also I wanted to show the value of the cells, so I passed the parameter `annot` as `True`.
 
 ![Heatmap](/images/heatmap.png)
 
-The heatmap shows that petal_length and petal_width, with a value close to 1, have a high correlation. Both petal_width and petal_length also show good correlation with sepal_length.  Sepal_width has far less relationship with petal_width and petal_length.
+The heatmap shows that petal_length and petal_width, with a value close to 1, have a high correlation. Both petal_width and petal_length together show good correlation with sepal_length.  Sepal_width has far less relationship with petal_width and petal_length.
 
 <a name="5.-summary-&-conclusion"></a>
 ## Summary & Conclusion
