@@ -101,7 +101,7 @@ What I really wanted to know was the minimum and maximum for each of the four me
 
  ![max_min_mean](/images/max_min_mean.png)
 
-While not a terribly visual tool in itself, I found it useful in that it gives the range of measurements for each species and already it is clear that *Iris setosa* is smaller, and by virtue of that, more distinctive than the other two species. 
+I found these stats useful in that it gives the range of measurements and the mean values sketch the dimensions of the 'average' leaf for each species and already it is clear that *Iris setosa* is smaller, and by virtue of that, more distinctive than the other two species. 
 
 ## Data Visualisation
 
