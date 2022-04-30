@@ -15,9 +15,9 @@
 
 ## Introduction
 <a name="1.-introduction"></a>
-This repository contains my pands project on the Fischer Iris Data Set, submitted for assessment under the Programming and Scripting module which in turn forms part of the Higher Diploma in Computing and Data Analytics at GMIT.
+This repository contains my pands project on the Fisher Iris Data Set, submitted for assessment under the Programming and Scripting module which in turn forms part of the Higher Diploma in Computing and Data Analytics at GMIT.
 
-In this project I will outline the programs and tools used to build and execute this project before covering the history and provenance of the Fischer iris data set and why it is so widely used in data analytics and machine learning. 
+In this project I will outline the programs and tools used to build and execute this project before covering the history and provenance of the Fisher iris data set and why it is so widely used in data analytics and machine learning. 
 
 I will be using VS Code as my source code editor and this accompanying README file outlines the thinking behind coding which I use to introduce, manipulate and present the data therein, discussion of the code used, presentation of informative plots and visualisations from that data and finally summarise my findings and conclusions.
 
