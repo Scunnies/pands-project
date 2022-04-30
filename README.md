@@ -115,7 +115,7 @@ I saved the four histograms to `histograms.png`.  The histograms for petal lengt
 ### Scatter plots
 Scatter plots use a collection of points placed using Cartesian coordinates, basically a system used to locate a point, or points, in two-dimensional space from two variables.  By displaying a variable in each of the X and Y axis, we can clearly see if a relationship or correlation between the two variables exists. The useful thing about scatter plots is that they retain the exact data values and sample size. By colour coding the three species of iris in the plots, this distinction is even clearer. 
 
-![scatterplots](/images/scatterplots.png)
+![scatterplots](https://github.com/Scunnies/pands-project/blob/main/images/Scatterplots.png)
 
 Specifying a colour for each species greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some slight overlap with each other or can at least be said to have a much closer correlation with each other than with *setosa*.  The notable exception to this is the scatterplot for sepal length and sepal width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful or useful. 
 
