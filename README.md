@@ -17,11 +17,11 @@
 <a name="1.-introduction"></a>
 This repository contains my pands project on the Fischer Iris Data Set, submitted for assessment under the Programming and Scripting module which in turn forms part of the Higher Diploma in Computing and Data Analytics at GMIT.
 
-In this project I will outline the programs and tools used to build and execute this project before covering the history and provenance of the Fischer iris data set and why it is so widely used in machine learning. 
+In this project I will outline the programs and tools used to build and execute this project before covering the history and provenance of the Fischer iris data set and why it is so widely used in data analytics and machine learning. 
 
-I will be using VS Code as my source code editor and this accompanying README file outlines the thinking behind coding which I use to introduce, manipulate and present the data therein, discussion of the code used to examine and manipulate the data set, generate informative plots and visualisations from that data and finally summarise my findings and conclusions.
+I will be using VS Code as my source code editor and this accompanying README file outlines the thinking behind coding which I use to introduce, manipulate and present the data therein, discussion of the code used, presentation of informative plots and visualisations from that data and finally summarise my findings and conclusions.
 
-The aim and purpose of this project is to improve upon my Python coding and scripting, learn more about the dynamics of machine learning and the functions and uses of data visualisations. 
+The aim and purpose of this project is to improve upon my Python coding and scripting, learn more about the dynamics of data analysis and the functions and uses of data visualisations. 
 
  
 ## Technical Specifications
@@ -101,14 +101,14 @@ What I really wanted to know was the minimum and maximum for each of the four me
 
  ![max_min_mean](/images/max_min_mean.png)
 
-I found these stats useful in that it gives the range of measurements and the mean values sketch the dimensions of the 'average' leaf for each species and already it is clear that *Iris setosa* is smaller, and by virtue of that, more distinctive than the other two species. 
+I found these stats useful in that it gives the range of measurements and the mean values sketch the average dimensions for each species and already it is clear that *Iris setosa* is smaller, and by virtue of that, more distinctive than the other two species. 
 
 ## Data Visualisation
 
 ### Histogram
 A [histogram](https://asq.org/quality-resources/histogram) is a commonly used plotting tool to show frequency distributions in numerical data.  It visualises the distribution of values in a given dataset, the x-axis displaying the values in the dataset and the y-axis displaying the frequency of each value.  It differs from a bar chart in that it deals with quantitative data rather than categorical and elements are grouped together as ranges rather than individual entities, as they would be in a bar chart. In a histogram the data is allocated to bins, a series of intervals into which the data is effectively sorted.  Helpfully, the `pandas` in-built function `.hist()` plots histograms for the features in the dataset. In trying to establish the correct number of bins to specify I found a number of methods such as the Freedman–Diaconis rule, Sturges' rule and the Shimazaki-Shinomoto method to name but a few, and then I happened across the fact that there is an [`auto`](https://stackoverflow.com/questions/33458566/how-to-choose-bins-in-matplotlib-histogram) function, which uses the maximum of the Sturges and Freedman-Diaconis bin choice, so I quite happily deployed that instead!  It's useful to know that there are other available methods for use on future data sets though. 
 
-I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal_length and sepal_width is significant such that it's not as easy to distinguish the species in these two histograms. 
+I saved the four histograms to `histograms.png`.  The histograms for petal length and petal width are remarkable similar and the standalone bars to the left represent Irish Setosa, well apart from the other two species making these quite distinctive classification features. The overlap between the species in terms of sepal length and sepal width is significant such that it's not as easy to distinguish the species in these two histograms. 
 
  ![Histograms](/images/Histograms.png)
 
@@ -117,7 +117,7 @@ Scatter plots use a collection of points placed using Cartesian coordinates, bas
 
 ![scatterplots](/images/scatterplots.png)
 
-Specifying a colour for each species greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some slight overlap with each other or can at least be said to have a much closer correlation with each other than with *setosa*.  The notable exception to this is the scatterplot for sepal_length and sepal_width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful or useful. 
+Specifying a colour for each species greatly helps in interpreting these scatterplots although even without it, it would be clear that *setosa* can be easily distinguised from *versicolor* and *virginica* on all the plots. While *versicolor* and *virginica* can still be seen as fairly distinct from each other in most cases, particularly when colour coded, they nonetheless have some slight overlap with each other or can at least be said to have a much closer correlation with each other than with *setosa*.  The notable exception to this is the scatterplot for sepal length and sepal width where *versicolor* and *virginica* overlap considerably.  Therefore, as classifiers between these two particular species, these are not as impactful or useful. 
 
 ### Violin Plot 
 
@@ -134,11 +134,17 @@ I used Seaborn to plot the heatmap and in order to determine the correlation I u
 
 ![Heatmap](/images/heatmap.png)
 
-The heatmap shows that petal_length and petal_width, with a value close to 1, have a high correlation. Both petal_width and petal_length together show good correlation with sepal_length.  Sepal_width has far less relationship with petal_width and petal_length.
+The heatmap shows that petal length and petal width, with a value close to 1, have a high correlation. Both petal width and petal length together show good correlation with sepal length.  Sepal width has far less relationship with petal width and petal length.
 
 <a name="5.-summary-&-conclusion"></a>
 ## Summary & Conclusion
-INSERT TEXT
+Despite being small, a bit dull and of shaky provenance there is no doubt that the Iris Data Set is perfectly formed for training exercises in data analysis.  It is a relatively compact data set of just 150 measurements.  It has a well documented history, it's open source, has no missing or null values, the data is recorded all in the same measurement (cm) and with three classes it lends itself to more than just binary analysis.  
+
+In my initial analysis of the data set, a look at the mean measurements for each species immediately indicated that one of these flowers was not like the other ones.  *Iris setosa* stands apart from the other two with notably smaller measurements for sepal length, petal length and petal width, the exception being sepal width, for which it is larger than both *Iris versicolor*  and *Iris virginica* but even this, in itself, delineates it from *versicolor* and *virginica*.  
+
+It would be nice to be able to say that if an *Iris* had certain specific measurements it would slot neatly into one of the three classes but this is not the case.  Apart from there being almost 300 species within the Iris genus, there is sufficient overlap between *versicolor* and *virginica* such that definitively classifying a flower to one or the other would be difficult. However, a smaller flower that accorded more generally with *Iris setosa* would be an easier classification, being as it is quite clearly and linearly separable from the other two classes in this data set.  This is borne out by the different plots used to model the data.
+
+Having said that, if I were presented with three flowers, and knowing they were of one of these classes and grounded in the analysis I've carried out here, I could confidently classify the *Iris setosa* and make an educated guess as to which class to allocate the other two Iris flowers, basing my decision on measurements of petal width  - the scatterplots show that this has the least amount of overlap between *versicolor* and *virginica*.  I can see that the logical progression for me from making a 'best guess' based on the analysis and modelling that I have already carried out would be to develop an algorithm and/or model using machine learning that would do the predicting and classification for me, indicating the % accuracy.  As I gain confidence in Python and data analytics, I look forward to developing and honing the skills to carry out more detailed analyses in the future.  Maybe penguins next!
 
 <a name="6.-references"></a>
 ## References
